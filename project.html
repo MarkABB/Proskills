@@ -1,0 +1,49 @@
+
+<!DOCTYPE html> 
+<html>
+<head>
+<style>
+th{ background:#5555FF; }
+.grey { background: #DDDDDD;}
+.day { background: #AAAAFF; }
+</style>
+<script>
+function showCalender  {
+var numDays= parseInt(document.getElementById("txtNumDays").value);
+var fstDay= parseInt(document.getElementById("txtfstdays").value);
+document.getElementById("dicOutput").innerHtml=getCalander(numDays, fstDay);
+}
+function getCalander(numDays, fstDay) {
+var DateNum = new date 
+var currentDayNum = DateNum.getDate();
+
+var html = "<table border =1 ><tr><th width= 50>sun</th><tr><th width= 50>mon</th><tr><th width= 50>tue</th><tr><th width= 50>wed</th><tr><th width= 50>thu</th><tr><th width= 50>fri</th><tr><th width= 50>sat</th>
+var column=0
+html +="<tr>"
+for (i=0; i<fstday; i++){
+html+="<td class = 'grey'></td>";
+column++
+}
+var day =1;
+while (day <=numDays)
+{
+if (day==currentDayNum)
+html += "<td class='today'><u><b>" +day+ "</b> </u> </td>";
+else
+html += "<td class='day'>"+day+"</td>";
+column = 0
+}
+day++
+}
+if (column>0){
+for (i=column;i<7; i++)
+html += "<td class ='grey'></td>";
+}
+html += "</tr></table>";
+return html
+}
+</script>
+</head>
+<body>
+number of days in the month<input id ='txtNumDays'><br>
+1st of the month is on day 0-6<inp
