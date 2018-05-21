@@ -1,2 +1,2 @@
 # Proskills
-For the Professional Skills assignment
+For the Professional Skills assignment.
