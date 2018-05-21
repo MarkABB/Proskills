@@ -1,2 +1,2 @@
 # Proskills
-for a project
+For the Professional Skills assignment
